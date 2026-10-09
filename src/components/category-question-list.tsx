@@ -20,7 +20,7 @@ export function CategoryQuestionList({
         <Link
           key={question.id}
           href={`/practice/${categorySlug}/${question.id}`}
-          className="flex items-center justify-between gap-3 rounded-lg border px-4 py-3 transition-colors hover:border-foreground/30 hover:bg-muted/40"
+          className="flex items-center justify-between gap-3 rounded-lg border px-4 py-3 transition-colors hover:border-primary/40 hover:bg-accent/40"
         >
           <div className="flex items-center gap-3">
             <span className="text-sm font-medium text-muted-foreground">Q{i + 1}</span>

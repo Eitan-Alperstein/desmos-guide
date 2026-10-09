@@ -75,7 +75,7 @@ export function PracticeClient({ category, question, categoryQuestions }: Practi
         <div>
           <Link
             href={`/category/${category.slug}`}
-            className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            className="text-sm font-medium text-muted-foreground hover:text-primary"
           >
             ← {category.title}
           </Link>
@@ -113,7 +113,7 @@ export function PracticeClient({ category, question, categoryQuestions }: Practi
                         ? "border-emerald-500 bg-emerald-50 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200"
                         : reveal && isSelected && !isCorrectChoice
                           ? "border-rose-500 bg-rose-50 text-rose-900 dark:bg-rose-950 dark:text-rose-200"
-                          : "border-border hover:border-foreground/40 hover:bg-muted/50",
+                          : "border-border hover:border-primary/50 hover:bg-accent/40",
                     ].join(" ")}
                   >
                     {choice}
@@ -173,9 +173,9 @@ export function PracticeClient({ category, question, categoryQuestions }: Practi
           )}
 
           {showSolution && (
-            <Card className="border-dashed">
+            <Card className="border border-primary/25 bg-accent/30">
               <CardContent className="pt-6">
-                <p className="mb-2 text-sm font-semibold">How to solve it in Desmos</p>
+                <p className="mb-2 text-sm font-semibold text-primary">How to solve it in Desmos</p>
                 <ol className="list-decimal space-y-1.5 pl-5 text-sm text-muted-foreground">
                   {question.steps.map((step, i) => (
                     <li key={i}>{step}</li>

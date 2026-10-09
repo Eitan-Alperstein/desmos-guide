@@ -29,10 +29,18 @@ export function HomeStats() {
   return (
     <div className="rounded-xl border bg-card p-6 shadow-sm">
       <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="text-sm font-medium text-muted-foreground">Your rank</p>
-          <p className="text-2xl font-semibold tracking-tight">{rank.name}</p>
-          <p className="text-sm text-muted-foreground">{rank.description}</p>
+        <div className="flex items-center gap-4">
+          <span
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold"
+            style={{ backgroundColor: rank.color, color: rank.textColor }}
+          >
+            {rank.name[0]}
+          </span>
+          <div>
+            <p className="text-sm font-medium text-muted-foreground">Your rank</p>
+            <p className="text-2xl font-semibold tracking-tight">{rank.name}</p>
+            <p className="text-sm text-muted-foreground">{rank.description}</p>
+          </div>
         </div>
         <div className="text-right">
           <p className="text-sm font-medium text-muted-foreground">

@@ -109,6 +109,50 @@ const sections: Section[] = [
       "Watch for extraneous solutions on radical/absolute-value equations — always verify by substituting back in",
     ],
   },
+  {
+    title: "Checking equivalent expressions",
+    description: "One of the single highest-leverage Desmos tricks on the whole test.",
+    tips: [
+      "Graph both expressions as separate functions — if only one curve is visible, they're equivalent",
+      "Fastest check: graph (expression 1) - (expression 2); a flat line at y = 0 confirms equivalence",
+      "Use it to test 'which choice is equivalent to...' answer options one at a time instead of expanding by hand",
+    ],
+  },
+  {
+    title: "Counting solutions to a system",
+    description: "0, 1, 2, or infinite — read it straight off the graph instead of the algebra.",
+    tips: [
+      "Count the visible intersection points between the two graphs",
+      "Parallel lines that never touch mean 0 solutions",
+      "If the two graphs completely overlap into a single visible curve, there are infinitely many solutions",
+    ],
+  },
+  {
+    title: "Equations not solved for y",
+    description: "Desmos doesn't need an equation rearranged before it can graph it.",
+    tips: [
+      "Type an equation exactly as given, e.g. 2x + 5y = 20 — Desmos graphs it directly",
+      "To find x given y (or y given x), graph a horizontal or vertical line at the known value and click the intersection",
+    ],
+  },
+  {
+    title: "Lists & statistics",
+    description: "Skip the formulas for mean, median, and range entirely.",
+    tips: [
+      "Type a data set as a list using curly braces: L = {4, 8, 2, 9, 5}",
+      "mean(L), median(L), and stdev(L) are all built in",
+      "There's no range() function — type max(L) - min(L) directly",
+    ],
+  },
+  {
+    title: "Percent word problems",
+    description: "Type the whole calculation in one line instead of converting by hand.",
+    tips: [
+      "A percent of a number: 0.15*240 for '15% of 240'",
+      "Percent change in one expression: (new - old)/old * 100",
+      "Chain multiple percent changes together: 500*1.08*0.95",
+    ],
+  },
 ];
 
 export default function ReferencePage() {

@@ -37,7 +37,7 @@ function CategoryCardInner({
 
   return (
     <Link href={`/category/${category.slug}`} className="group">
-      <Card className="h-full transition-colors group-hover:border-foreground/30">
+      <Card className="h-full transition-colors group-hover:ring-primary/40">
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
             <CardTitle className="text-base leading-snug">{category.title}</CardTitle>

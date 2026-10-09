@@ -18,16 +18,16 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-      <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+      <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-primary">
         ← All categories
       </Link>
 
       <h1 className="mt-3 text-3xl font-semibold tracking-tight">{category.title}</h1>
       <p className="mt-2 text-muted-foreground">{category.shortDescription}</p>
 
-      <Card className="mt-6 border-dashed">
+      <Card className="mt-6 border border-primary/25 bg-accent/30">
         <CardContent className="pt-6">
-          <p className="mb-3 text-sm font-semibold">The Desmos trick</p>
+          <p className="mb-3 text-sm font-semibold text-primary">The Desmos trick</p>
           <p className="text-sm leading-relaxed text-muted-foreground">{category.trick}</p>
           <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
             {category.syntaxTips.map((tip, i) => (

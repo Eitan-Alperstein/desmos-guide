@@ -22,13 +22,13 @@ export default function Home() {
         <div className="mt-6 flex gap-3">
           <Link
             href={`/category/${categories[0].slug}`}
-            className="inline-flex h-11 items-center rounded-lg bg-foreground px-5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+            className="inline-flex h-11 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Start practicing
           </Link>
           <Link
             href="/reference"
-            className="inline-flex h-11 items-center rounded-lg border px-5 text-sm font-medium transition-colors hover:bg-muted"
+            className="inline-flex h-11 items-center rounded-lg border px-5 text-sm font-medium transition-colors hover:border-primary/40 hover:text-primary hover:bg-accent"
           >
             Desmos cheat sheet
           </Link>

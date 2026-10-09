@@ -219,6 +219,92 @@ export const categories: Category[] = [
       "Watch out for extraneous solutions with square roots — always verify in the original equation",
     ],
   },
+  {
+    slug: "equivalent-expressions",
+    title: "Checking Equivalent Expressions",
+    shortDescription: "Confirm two algebraic expressions are identical by graphing, not expanding.",
+    trick:
+      "Graph both expressions as separate functions — if their graphs sit exactly on top of each other (only one curve is visible), they're equivalent for every x. Even faster: graph expression1 minus expression2 and check that it's the flat line y = 0.",
+    syntaxTips: [
+      "Graph y1 = (first expression) and y2 = (second expression) and look for a single visible curve",
+      "Fastest check: graph y = (expression 1) - (expression 2); if it's the flat line y = 0, they're equivalent",
+      "Great for testing 'which choice is equivalent to...' answer options one at a time",
+    ],
+  },
+  {
+    slug: "number-of-solutions",
+    title: "Number of Solutions to a System",
+    shortDescription: "Count intersection points to tell 0, 1, 2, or infinite solutions apart.",
+    trick:
+      "Graph both equations in the system and literally count the intersection points. No crossings means no solution, one crossing means one solution, and if the two graphs completely overlap (you can only see one curve), the system has infinitely many solutions.",
+    syntaxTips: [
+      "Graph both equations in the same calculator and count where they cross",
+      "Parallel lines that never touch mean 0 solutions",
+      "If the graphs look identical and overlap completely, the system has infinitely many solutions",
+    ],
+  },
+  {
+    slug: "solve-in-terms-of",
+    title: "Solving In Terms Of Another Variable",
+    shortDescription: "Find one variable's value given another, without rearranging the formula first.",
+    trick:
+      "Desmos graphs equations exactly as given — they don't need to be solved for y first. To find x given a y-value (or vice versa), graph the original equation plus a horizontal or vertical line at the known value, then click the intersection to read the other variable.",
+    syntaxTips: [
+      "Type the equation exactly as given, e.g. 2x + 5y = 20 — no need to isolate a variable",
+      "To find x when y = k: graph the equation and y = k, then click the intersection",
+      "To find y when x = k: graph the equation and x = k (a vertical line), then click the intersection",
+      "For a formula with an unknown constant, add a slider for it and drag until the graph matches the given condition",
+    ],
+  },
+  {
+    slug: "polynomial-intersections",
+    title: "Polynomial-to-Polynomial Intersections",
+    shortDescription: "Find every crossing point between two higher-degree curves at once.",
+    trick:
+      "Graph both polynomials in the same calculator and click every visible intersection point — curves of degree 2 or higher can cross more than twice, so zoom out first to make sure you've found all of them.",
+    syntaxTips: [
+      "Graph both polynomials on separate lines",
+      "Zoom out before counting intersections — higher-degree curves can cross far from the origin",
+      "Click each crossing point individually to read its exact coordinates",
+    ],
+  },
+  {
+    slug: "statistics-lists",
+    title: "Mean, Median & Range with Lists",
+    shortDescription: "Compute data-set statistics instantly using Desmos lists.",
+    trick:
+      "Type a data set as a list using curly braces, then use Desmos's built-in statistics functions — mean(), median(), and stdev() — to get the answer in one line, with range computed as max() minus min().",
+    syntaxTips: [
+      "Type a list with curly braces: L = {4, 8, 2, 9, 5}",
+      "mean(L) and median(L) return the average and median instantly",
+      "stdev(L) returns the standard deviation",
+      "There's no built-in range function — type max(L) - min(L) directly",
+    ],
+  },
+  {
+    slug: "percentages",
+    title: "Percent Word Problems",
+    shortDescription: "Chain percent calculations in a single typed expression.",
+    trick:
+      "Type the entire percent calculation as one expression instead of converting percents to decimals by hand — Desmos evaluates it immediately, and you can chain multiple percent changes (like a discount followed by a tax) in a single line.",
+    syntaxTips: [
+      "Type a percent directly as a decimal: 0.15*240 for '15% of 240'",
+      "Percent change in one line: (new - old)/old * 100",
+      "Chain multiple percent changes together: 500*1.08*0.95 for an 8% increase followed by a 5% decrease",
+    ],
+  },
+  {
+    slug: "special-angle-trig",
+    title: "Special Angles & Exact Trig Values",
+    shortDescription: "Get exact sine, cosine, and tangent values without the unit circle.",
+    trick:
+      "Toggle Desmos into degree mode and type the trig expression directly — no unit circle memorization needed. Compare the decimal Desmos gives you against common exact forms like √2/2 or √3/2 to confirm the exact value asked for.",
+    syntaxTips: [
+      "Click the wrench/settings icon to switch between Degrees and Radians before evaluating anything",
+      "In degree mode, type sin(30) directly to get 0.5 instantly",
+      "In radian mode, pi is recognized automatically: type cos(pi/3)",
+    ],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
