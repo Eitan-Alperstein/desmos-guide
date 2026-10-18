@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.vscode/
+.claude/
+.vercel/
+.next/
+target/
+.build/
+DerivedData/
+xcuserdata/
